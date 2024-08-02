@@ -1,0 +1,32 @@
+{% extends "core/base.html"%}
+{% load static %}
+{% block title %}blog{% endblock %}
+{% block content %}
+    <h1 class='text-center my-4 '>Welcome sir sigh up pls</h1>
+    <form>
+        <input type="text" placeholder="Enter your username sir.."
+        name='username'
+        class="form-control">
+        <input type="email" name="email"
+        placeholder="Enter your email sir.."
+        class="form-control">
+        <input type="password" name="password"
+        placeholder="Enter your password sir.."
+        class="form-control">
+        <input type="password" name="reapet_password"
+        placeholder="Reapet your password sir.."
+        class="form-control">
+        <input type="Date" name="date_of_birth">
+        <div class="d-flex justify-content-center gap-3">
+            <span>Male</span>
+            <input type="radio" name="gender" value="male" >
+            <input type="radio" name="gender" value="female">
+            <span>Female</span>
+        </div>
+        <div class="d-flex justify-content-center gap-3">
+            <span>user terms</span>
+            <input type="checkbox" name="user_terms">
+        </div>
+        <button class="btn btn-outline-primary" type="submit">confurm your AU player</button>
+    </form>
+{% endblock %}

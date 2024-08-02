@@ -1,0 +1,28 @@
+{% extends "core/base.html"%}
+{% load static %}
+{% block title %}blog{% endblock %}
+{% block content %}
+  <div class="container">
+    <h1>[BLOG404]</h1>
+    {% for post in posts %}
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'blog/img/osiris.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{post.title}}</h5>
+          <p class="card-text">{{post.text}}</p>
+          <form action="" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="post_id" value="{{post.id}}">
+            <span>{{post.likes}}</span>
+            <button class="bg-transparent border-0" type="submit" style="width: 36px;">
+
+              <img src="{% static 'blog/img/like.png'%}" alt="">
+            </button>
+          </form>
+          <a href="#" class="btn btn-primary">check information</a>
+          <p class="">{{post.is.published}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

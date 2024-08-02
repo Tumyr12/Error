@@ -1,0 +1,12 @@
+{% extends "core/base.html"%}
+{% load static %}
+{% block title %}blog{% endblock %}
+{% block content %}
+    <h1>Magic numbers</h1>
+    <form action="" method="post">
+    {% csrf_token %}
+    <input type="numbers" placeholder="Enter guess number sir.." name="user_guess">
+    <button type="submit">Confirm sir</button>
+    </form>
+    <h2>{{result}}</h2>
+{% endblock %}
